@@ -1,0 +1,107 @@
+/* Section spacing */
+#skills {
+  padding: 6rem 6vw;
+  scroll-margin-top: 120px;
+}
+
+/* Heading – same gradient system */
+.SkillsHeading {
+  margin-top: 120px;
+  height: 100px;
+
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  color: transparent;
+  background-image: linear-gradient(90deg, #8c00ff, #e2cb00);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  text-shadow:
+    0 0 20px rgba(220, 27, 27, 0.35),
+    0 0 40px rgba(118, 1, 213, 0.25);
+}
+
+/* Grid layout */
+.SkillsGrid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+/* Skill circle */
+.SkillCircle {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid rgba(140, 0, 255, 0.5);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Glow on hover */
+.SkillCircle:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 20px rgba(140, 0, 255, 0.45),
+    0 0 40px rgba(226, 203, 0, 0.25);
+}
+
+/* Icon */
+.SkillCircle img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 1;
+
+}
+
+/* Skill name (hidden initially) */
+.SkillCircle span {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+
+  color: #e2cb00;
+}
+
+/* Reveal name on hover */
+.SkillCircle:hover span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .SkillsHeading {
+    font-size: 3rem;
+  }
+
+  .SkillCircle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .SkillCircle img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,123 @@
+/* Section wrapper */
+#interest {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  min-height: 700px;
+  scroll-margin-top: 120px;
+}
+
+/* Gradient heading */
+.InterestsHeading {
+  margin-top: 120px;
+  height: 100px;
+
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-left: 1.2rem;
+  transform: translateY(-30px);
+
+  color: transparent;
+  background-image: linear-gradient(90deg, #8c00ff, #e2cb00);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  text-shadow:
+    0 0 20px rgba(220, 27, 27, 0.35),
+    0 0 40px rgba(118, 1, 213, 0.25);
+}
+
+/* Main container */
+.InterestsMain {
+  width: 100%;
+  padding-left: 60px;
+}
+
+/* Horizontal list */
+.InterestsList {
+  display: flex;
+  gap: 2.5rem;
+
+  list-style: none;
+  padding: 1rem 0 2.5rem;
+  margin: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+.InterestsList::-webkit-scrollbar {
+  height: 8px;
+}
+.InterestsList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
+.InterestsList::-webkit-scrollbar-thumb {
+  background: rgba(140, 0, 255, 0.6);
+  border-radius: 6px;
+}
+
+/* Interest circle */
+.InterestCard {
+  flex-shrink: 0;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  text-align: center;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Hover interaction */
+.InterestCard:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 25px rgba(140, 0, 255, 0.25);
+}
+
+/* Icon */
+.InterestIcon {
+  font-size: 2.6rem;
+}
+
+/* Title only */
+.InterestCard h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 80%;
+}
+
+/* Remove paragraph entirely */
+.InterestCard p {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .InterestCard {
+    width: 220px;
+    height: 220px;
+  }
+
+  .InterestsHeading {
+    font-size: 3rem;
+    margin-top: 80px;
+    transform: translateY(-20px);
+  }
+}

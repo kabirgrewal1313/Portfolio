@@ -1,0 +1,95 @@
+#projects {
+  scroll-margin-top: 120px; /* adjust to your navbar height */
+}
+
+.projects{
+    height:700px;
+    margin-top: 100px;
+}
+
+.projects-title {
+  height:100px;  
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  display: flex;
+    justify-content: center;
+    align-content: top;
+    color: transparent;
+    background-image: linear-gradient(90deg, #8c00ff,#e2cb00);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow:
+        0 0 20px rgba(220, 27, 27, 0.35),
+        0 0 40px rgba(118, 1, 213, 0.25);
+}
+
+/* Container */
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap; /* remove this if you NEVER want wrapping */
+}
+
+/* Card */
+.projects-list li {
+  background-color: #020617;
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+
+  width: 320px; /* forces side-by-side */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.projects-list li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Text */
+.projects-list h1 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  color: #f8fafc;
+}
+
+.projects-list p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 1.2rem;
+}
+
+/* Link */
+.projects-list a {
+    margin-top: auto;
+  display: inline-flex;   /* or inline-block */
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 30px;
+
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+
+  background-image: linear-gradient(90deg, #6c00ba,#d801b4);
+  border-radius: 30px;
+  color: #ffffff;
+  text-decoration: none;
+
+  transition: transform 0.3s ease;
+}
+
+.projects-list a:hover {
+  transform: translate(12px);
+}

@@ -1,0 +1,132 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+  color: #E5CEFF; /* light text for dark background */ /* responsive stacking on small screens */
+  z-index: 10;
+}
+
+/* Text content */
+.hero-title {
+    width: auto;
+}
+
+.hero-heading {
+  font-size: 8rem;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.hero-highlight {
+  position: relative;
+
+  color: transparent;
+  background-image: linear-gradient(90deg, #d900ff,#a99801);
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  text-shadow:
+    0 0 20px rgba(220, 27, 27, 0.35),
+    0 0 40px rgba(118, 1, 213, 0.25);
+}
+
+
+.hero-desc {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+   color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(90deg, #d900ff,#a99801);
+  text-shadow: #b30181 10%;
+/* subtle light accent */
+}
+.hero-text{
+    font-size: 1.5rem;
+    color:#E5CEFF
+}
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-top: 2rem;
+}
+.hero-buttons a{
+    transition: all 0.5s;
+    width:76px;
+    height:76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+    color:#E5CEFF;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+}
+.hero-buttons a:hover {
+  transform: translateY(-6px) scale(1.05);
+
+  box-shadow:
+    0 0 30px rgba(217, 0, 255, 0.45),
+    0 0 60px rgba(169, 152, 1, 0.35);
+    transition: all 0.5s;
+}
+/* Hero image */
+.hero-image img {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+
+
+  /* GLOW */
+  box-shadow:
+    0 0 40px rgba(220, 27, 27, 0.35),
+    0 0 80px rgba(118, 1, 213, 0.25),
+    0 0 120px rgba(118, 1, 213, 0.15);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.04);
+  box-shadow:
+    0 0 60px rgba(220, 27, 27, 0.45),
+    0 0 120px rgba(118, 1, 213, 0.35),
+    0 0 180px rgba(118, 1, 213, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .hero-title {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .hero-image {
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-heading {
+    font-size: 2.2rem;
+  }
+
+  .hero-desc {
+    font-size: 1rem;
+  }
+}

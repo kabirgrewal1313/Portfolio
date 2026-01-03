@@ -1,0 +1,6 @@
+const projects=[
+    {id:'FinTerminal',label:"Finance Terminal",link:"https://github.com/kabirgrewal1313/agentic-terminal-analyser",description:"Built a full-stack financial analytics platform leveraging multi-tier LLMs for structured stock analysis and decision support. \n\nImplemented modular Python APIs using LangChain and RAG to enable grounded, reliable LLM-driven insights"},
+    {id:'HPO',label:"Hyperparameter Optimization",link:"https://github.com/kabirgrewal1313/Multi-Algorithm-HPO",description:"Developed and deployed a secure full-stack weather application using FastAPI, JWT-based authentication, and the OpenWeatherMap API. \n\nImplemented caching mechanisms to improve performance and reduce redundant API calls, and deployed the application on AWS EC2 with a focus on scalability"},
+    {id:"WeatherApp",label:"Weather App",link:"https://github.com/kabirgrewal1313/Weather",description:"Developed and deployed a secure full-stack weather application using FastAPI, JWT-based authentication, and the OpenWeatherMap API. \n\nImplemented caching mechanisms to improve performance and reduce redundant API calls, and deployed the application on AWS EC2 with a focus on scalability"}
+]
+export default projects
